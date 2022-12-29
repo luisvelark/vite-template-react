@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  react-app:
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      stdin_open: true
+      ports:
+        - 5173:5173
+      volumes:
+        - ./src:/usr/src/app/src:cached
+        - .//public:/usr/src/app/public:cached
+        - /usr/src/app/node_modules
+      tty: true
