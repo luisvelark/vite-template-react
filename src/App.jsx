@@ -11,7 +11,7 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <button onClick={() => setCount(count => count + 1)}>
-            count is: {count}
+            count is: {count} cero
           </button>
         </p>
         <p>

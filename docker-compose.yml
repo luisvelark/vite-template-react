@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  react-app:
+  app:
       build:
         context: ./
         dockerfile: Dockerfile
@@ -8,7 +8,6 @@ services:
       ports:
         - 5173:5173
       volumes:
-        - ./src:/usr/src/app/src:cached
-        - .//public:/usr/src/app/public:cached
+        - .:/usr/src/app:cached
         - /usr/src/app/node_modules
       tty: true
